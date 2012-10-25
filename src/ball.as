@@ -8,6 +8,7 @@
 package {
 import flash.display.MovieClip;
 import flash.display.Shape;
+import flash.events.MouseEvent;
 
 public class ball extends MovieClip{
 	public function ball(radius:uint) {
@@ -15,7 +16,13 @@ public class ball extends MovieClip{
 		circle.graphics.beginFill(0xFF00FF,0.5);
 		circle.graphics.drawCircle(50,50,radius);
 		circle.graphics.endFill();
+		this.addEventListener(MouseEvent.CLICK, clickMouse);
 		this.addChild(circle);
+	}
+
+	private function clickMouse(event:MouseEvent):void {
+		this.x += 2;
+		this.y += 2;
 	}
 }
 }
