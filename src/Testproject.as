@@ -4,10 +4,12 @@ import flash.display.Sprite;
 import flash.text.TextField;
 
 public class Testproject extends Sprite {
+	private var newball:ball;
+	private var ballRadius:uint = 30;
     public function Testproject() {
-        var textField:TextField = new TextField();
-        textField.text = "Hello, World";
-        addChild(textField);
+	    newball = new ball(ballRadius) ;
+	    stage.addChild(newball);
+
     }
 }
 }
