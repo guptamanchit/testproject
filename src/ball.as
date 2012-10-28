@@ -16,7 +16,7 @@ public class ball extends MovieClip{
 		circle.graphics.beginFill(0xFF00FF,0.5);
 		circle.graphics.drawCircle(50,50,radius);
 		circle.graphics.endFill();
-		this.addEventListener(MouseEvent.CLICK, clickMouse);
+		this.addEventListener(MouseEvent.MOUSE_DOWN, clickMouse);
 		this.addChild(circle);
 	}
 
